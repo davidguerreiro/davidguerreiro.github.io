@@ -95,12 +95,28 @@ nav ul li{
 	-moz-transition: all .5s; 
 	-webkit-transition: all .5s;
 	transition: all .5s;
-	-moz-transform: translateX(-1em);
-	transform: translateX(-1em);
 }
 
 .launcher:hover i{
 	opacity: 1;
+}
+
+.launcher .icon-right-big{
+	-moz-transform: translateX(-1em);
+	transform: translateX(-1em);
+}
+
+.launcher:hover .icon-right-big{
+	-moz-transform: translateX(0);
+	transform: translateX(0);	
+}
+
+.launcher .icon-left-big{
+	-moz-transform: translateX(1em);
+	transform: translateX(1em);
+}
+
+.launcher:i .icon-left-big{
 	-moz-transform: translateX(0);
 	transform: translateX(0);
 }
