@@ -8,10 +8,26 @@ body{
 /*---------------------------------------------------------------------------------------------------------*/
 /*HEADER---------------------------------------------------------------------------------------------------*/
 
+header{
+	text-align: center;
+	background-color: #241858;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
 header h1{
 	/*main title*/
 	font-family: 'Francois One', sans-serif;
+	font-size: 2em;
+	color: white;
 }
+
+header h2{
+	/*header subtitle*/
+	font-size: 1em;
+	color: white;
+}
+
 
 
 /*---------------------------------------------------------------------------------------------------------*/
