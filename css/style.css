@@ -52,14 +52,14 @@ ul{
 nav ul li{
 	float: left;
 	list-style-type: none;
-	width: 20%;
+	width: 40%;
 }
 
 
 /*---------------------------------------------------------------------------------------------------------*/
 /*LINKS----------------------------------------------------------------------------------------------------*/
 
-li a:link{text-decoration: none; font-size: 1em; display: inline-block; width: 50%; color: white; background-color: transparent; padding: 10px; font-weight: bold; -moz-transition: all 1s; -webkit-transition: all 1s;}
+li a:link{text-decoration: none; font-size: 1em; display: inline-block; color: white; background-color: transparent; font-weight: bold; -moz-transition: all 1s; -webkit-transition: all 1s;}
 li a:visited{color: white;}
-li a:hover{background-color: #271A5C; }
+li a:hover{color: #271A5C; }
 /*---------------------------------------------------------------------------------------------------------*/
