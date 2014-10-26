@@ -51,6 +51,7 @@ ul{
 nav ul li{
 	float: left;
 	list-style-type: none;
+	width: 50%;
 }
 
 
