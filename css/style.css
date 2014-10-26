@@ -102,6 +102,7 @@ nav ul li{
 }
 
 .launcher .icon-right-big{
+	padding-right: 0.5em;
 	-moz-transform: translateX(-1em);
 	transform: translateX(-1em);
 }
@@ -112,6 +113,7 @@ nav ul li{
 }
 
 .launcher .icon-left-big{
+	padding-left: 0.5em;
 	-moz-transform: translateX(1em);
 	transform: translateX(1em);
 }
