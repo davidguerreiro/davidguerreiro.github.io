@@ -17,6 +17,11 @@ body{
 	padding: 0 2em;
 }
 
+.work img{
+	/*class for work experience*/
+	width: 100%;
+}
+
 .content i{
 	/*i for h3 sections*/
 	padding-right: 0.5em;
