@@ -37,6 +37,10 @@ header h2{
 	color: white;
 }
 
+nav{
+	display: inline-block;
+}
+
 nav ul li{
 	float: left;
 
