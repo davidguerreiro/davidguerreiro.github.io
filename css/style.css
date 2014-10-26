@@ -17,11 +17,23 @@ body{
 	padding: 0 2em;
 }
 
+.work{
+	/*this class takes float elements in work divs*/
+	clear: both;
+	border: 1px solid red;
+}
+
+
 .work img{
 	/*class for work experience*/
 	float: left;
-	padding-right: 1em;
-	width: 50%;
+	padding-right: 1.5em;
+	width: 33%;
+}
+
+.work-list{
+	/*this class takes all work divs*/
+	padding: 1em 0;
 }
 
 .content i{
