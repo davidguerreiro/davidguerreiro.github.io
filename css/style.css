@@ -108,23 +108,19 @@ nav ul li{
 
 .launcher .icon-right-big{
 	padding-right: 0.5em;
-	-moz-transform: translateX(-1em);
 	transform: translateX(-1em);
 }
 
 .launcher:hover .icon-right-big{
-	-moz-transform: translateX(0);
 	transform: translateX(0);	
 }
 
 .launcher .icon-left-big{
 	padding-left: 0.5em;
-	-moz-transform: translateX(1em);
 	transform: translateX(1em);
 }
 
 .launcher:hover .icon-left-big{
-	-moz-transform: translateX(0);
 	transform: translateX(0);
 }
 
