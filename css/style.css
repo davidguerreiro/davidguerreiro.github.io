@@ -95,7 +95,7 @@ nav ul li{
 	padding: 1em 0;
 }
 
-.block-color:nth-child(2n){
+.block-color:nth-child(2n+1){
 	background-color: #EBE6FF;
 }
 
