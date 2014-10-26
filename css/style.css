@@ -20,7 +20,6 @@ body{
 .work{
 	/*this class takes float elements in work divs*/
 	clear: both;
-	border: 1px solid red;
 }
 
 
