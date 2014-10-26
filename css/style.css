@@ -116,7 +116,7 @@ nav ul li{
 	transform: translateX(1em);
 }
 
-.launcher:i .icon-left-big{
+.launcher:hover .icon-left-big{
 	-moz-transform: translateX(0);
 	transform: translateX(0);
 }
