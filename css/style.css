@@ -53,6 +53,7 @@ nav ul li{
 /*---------------------------------------------------------------------------------------------------------*/
 /*LINKS----------------------------------------------------------------------------------------------------*/
 
-li a:link{text-decoration: none; font-size: 1em; display: inline-block; width: 50%; color: white; background-color: transparent; padding-top: 10px; padding-bottom: 10px;}
-li a:hover{background-color: }
+li a:link{text-decoration: none; font-size: 1em; display: inline-block; width: 50%; color: white; background-color: transparent; padding: 10px; font-weight: bold; -moz-transition: all 1s; -webkit-transition: all 1s;}
+li a:visited{color: white;}
+li a:hover{background-color: #271A5C; }
 /*---------------------------------------------------------------------------------------------------------*/
