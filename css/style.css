@@ -20,6 +20,8 @@ body{
 .work img{
 	/*class for work experience*/
 	float: left;
+	padding-right: 1em;
+	width: 50%;
 }
 
 .content i{
