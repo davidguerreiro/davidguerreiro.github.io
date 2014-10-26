@@ -69,7 +69,6 @@ nav ul a{
 	font-weight: bold; 
 	-moz-transition: all .5s; 
 	-webkit-transition: all .5s;
-
 	text-align: center;
 }
 
@@ -78,5 +77,5 @@ nav a:visited{
 	color: white;
 }
 nav a:hover{
-	color: #271A5C; 
+	background-color: #271A5C; 
 }
