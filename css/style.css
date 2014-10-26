@@ -88,6 +88,17 @@ nav ul li{
 	background-color: #413378; 
 }
 
+/*main a arrow animation*/
+.launcher i{
+	opacity: 0;
+	-moz-transition: all .5s; 
+	-webkit-transition: all .5s;
+}
+
+.launcher:hover i{
+	opacity: 1;
+}
+
 /*CONTENT-----------------------------------------------------------------------------------------------------*/
 
 /*background color 1*/
