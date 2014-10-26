@@ -95,16 +95,23 @@ nav ul li{
 	padding: 1em 0;
 }
 
+.block-color:nth-child(2n){
+	background-color: #EBE6FF;
+}
 
+/*
 .block-color--2{
 	background-color: #EBE6FF;
 }
 
-/*background color 2*/
+/*background color 2
 
 .block-color--1{
 	background-color: white;
-}
+}*/
+
+
+
 /*------------------------------------------------------------------------------------------------------------*/
 /*FOOTER------------------------------------------------------------------------------------------------------*/
 
