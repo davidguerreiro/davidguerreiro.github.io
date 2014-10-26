@@ -44,22 +44,31 @@ nav{
 	background-color: #5F5293;
 }
 
-ul{
-	width: 100%;
-	display: inline-block;
-}
-
-nav ul li{
-	float: left;
+nav ul{
+	padding: 0;
+	margin: 0;
 	list-style-type: none;
-	width: 40%;
+}
+
+nav ul a{
+	float: left;
+	display: block;
+	width: 50%;
+
+	text-decoration: none; 
+	font-size: 1em; 
+	display: inline-block; 
+	color: white; 
+	background-color: transparent; 
+	font-weight: bold; 
+	-moz-transition: all 1s; 
+	-webkit-transition: all 1s;
 }
 
 
-/*---------------------------------------------------------------------------------------------------------*/
-/*LINKS----------------------------------------------------------------------------------------------------*/
-
-li a:link{text-decoration: none; font-size: 1em; display: inline-block; color: white; background-color: transparent; font-weight: bold; -moz-transition: all 1s; -webkit-transition: all 1s;}
-li a:visited{color: white;}
-li a:hover{color: #271A5C; }
-/*---------------------------------------------------------------------------------------------------------*/
+nav a:visited{
+	color: white;
+}
+nav a:hover{
+	color: #271A5C; 
+}
