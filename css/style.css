@@ -28,6 +28,11 @@ body{
 	float: left;
 	padding-right: 1.5em;
 	width: 33%;
+	border: 1px solid #241858;
+}
+
+.work img:hover{
+	border-color: #241858;
 }
 
 .work-list{
