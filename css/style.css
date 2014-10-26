@@ -18,13 +18,13 @@ header{
 header h1{
 	/*main title*/
 	font-family: 'Francois One', sans-serif;
-	font-size: 2em;
+	font-size: 4em;
 	color: white;
 }
 
 header h2{
 	/*header subtitle*/
-	font-size: 1em;
+	font-size: 2em;
 	color: white;
 }
 
