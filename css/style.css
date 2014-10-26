@@ -25,16 +25,14 @@ body{
 
 .work img{
 	/*class for work experience*/
-	float: left;
-	padding-right: 1.5em;
-	width: 33%;
+	width: 100%;
 }
 
 
 
 .work-list{
 	/*this class takes all work divs*/
-	padding: 1em 0;
+	padding-bottom: 1em 0;
 }
 
 .content i{
@@ -212,5 +210,13 @@ footer{
 	.block-color h3{
 		font-size:  1.50em;
 	}
+
+	.work img{
+	/*class for work experience*/
+	float: left;
+	padding-right: 1.5em;
+	width: 33%;
+	}
+
 
 }
