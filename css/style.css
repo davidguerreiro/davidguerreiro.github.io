@@ -99,17 +99,10 @@ nav ul li{
 	background-color: #EBE6FF;
 }
 
-/*
-.block-color--2{
-	background-color: #EBE6FF;
+.block-color{
+	font-family: 'Francois One', sans-serif;
+	color: #18075E;
 }
-
-/*background color 2
-
-.block-color--1{
-	background-color: white;
-}*/
-
 
 
 /*------------------------------------------------------------------------------------------------------------*/
@@ -125,6 +118,8 @@ footer{
 
 /*------------------------------------------------------------------------------------------------------------*/
 
+/*RESPONSIVE desktop and tablets-----------------------------------------------------------------------------*/
+
 @media all and (min-width: 640px) {
 
 	header {
@@ -139,6 +134,10 @@ footer{
 
 	.content{
 		padding: 0 3em;
+	}
+
+	.block-color h3{
+		font-size:  1.10em;
 	}
 
 }
