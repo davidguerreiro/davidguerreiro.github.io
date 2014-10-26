@@ -44,6 +44,10 @@ nav{
 	background-color: #5F5293;
 }
 
+ul{
+	width: 100%;
+}
+
 nav ul li{
 	float: left;
 	list-style-type: none;
