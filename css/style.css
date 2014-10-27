@@ -17,6 +17,11 @@ body{
 	padding: 0 2em;
 }
 
+.content ul li{
+	list-style-type: square;
+	padding: 1em 0;
+}
+
 .work{
 	/*this class takes float elements in work divs*/
 	clear: both;
