@@ -40,30 +40,229 @@
 			</nav>
 			<article class="block-color">
 				<div class="content">
-					<p>Hello World !! :D</p>
-					<p>						
-						<pre>
-							<code class="lang-php">
+					<h2 class="article-title">How to develop an OOP MySql Database handler with PHP for beginners</h2>
+					<h3><i class="icon-cog"></i>Introduction</h3>	
+					<p>
+						It's well known by every developer that working with databases can be sometimes quite tricky, especially when we are giving ours first steps in the world of the server side programing. Wordpress and similar CMS have their own database handler already implemented by default, giving us a powerful tool to deal with the DB. We only need to be worried about how good our MySql queries are and, above all, be sure that they are properly written.
+					</p>
+					<p>
+						But what happens when we are working in a project from scratch with pure PHP ? Then we have to use all these 'mysql' (or 'mysqli') functions every time we want to open a new connection, execute a query or close the most recently connection opened. In general, beginners (me included just few months ago) waste a lot of time writing thousands of lines sending queries or checking errors. Would it be better to write some functions and avoid all these amount of work every time we want to work with databases? From my point of view, the answer is yes, definitely yes.
+					</p>
+					<p>
+						In this article I'm going to show you how to create a class from the ground up which allow you to save a lot of time when you have to deal with a database in PHP. This is oriented to beginners and you don't even need to have a full knowledge about OOP because all methods and procedures are properly explained below and code examples are provided too.
+					</p>
+					<p>
+						You must notice that with this article I just want to provide you with the basis you need to develop your own class to work with databases using OOP. If you want to use it in a real project, make sure to add all the security stuffs to this class in order to parse the data, avoid sql injections and so on.
+					</p>
+				</div>		
+			</article>
+			<article class="block-color">
+				<div class="content">
+					<h3><i class="icon-cog"></i>So what we need ?</h3>
+					<p>First of all, let's going to define wich methods and attributes our class need. In order to have a robust database handler we will need, at least, the following attributes:
+						<ul>
+							<li>We need <b>three attributes which define the mysql server, user and the name of the database</b> in order to use them to make a new connection.</li>
+							<li>We need <b>an attribute to retrieve the number of rows affected by the last connection</b> easily.</li>
+							<li>We need <b>an attribute to save the connection status.</b></li>
+							<li>And finally we need <b>an attribute to keep and retrieve the name of the database </b> that we are currently connected.</li>
+						</ul>
+					</p>
+					<p>
+						Now we are going to define the methods:
+						<ul>
+							<li>Our first method <b>will check the database connection status</b> so we will be able to test wheter the connection is properly done or not.</li>
+							<li>The second one <b>will return the name of the database which we are connected</b> at the moment.</li>
+							<li>The third method <b>will allow us to change the database which we are connected</b> now.</li>
+							<li>With the fourth method we <b>will execute a query</b>. This method will not return any type of data. It will only check if the query was executed correctly</li>
+							<li>Our fifth method <b>will allow us to get the results of the query</b>. This method will be used for SELECT queries mainly.</li>
+							<li>The sixth method <b>will retrieve a single row</b> of the selected table.</li>
+							<li>With the seventh method <b>we will get a single value,</b> for example, the value of a single field on the selected table.</li>
+							<li>Finally, the last method <b> will close the connection with the database</b></li>
+						</ul>
+					</p>
+					<p>
+						With all the attributes and methods defined, we are now ready to start writting our class. Let's do it !
+					</p>
+				</div>
+			</article>
+			<article class="block-color">
+				<div class="content">
+					<h3><i class="icon-cog"></i>Class construct</h3>
+					<p>
+						First of all, we have to define the constructor. In PHP you can define it either writing a function with the same name that our class has or defining a function constructor. In this case, we have defined a function constructor that will be called every time time we instantiate an object. This function will allow us to establish a connection between out application / website and the database, so all the details we need to make that connection possible have to be defined here. 
+					</p>
+					<p>
+						Don't forget to declare our new class using the reserved word <b>class</b> followed by the class's name with the first letter capitalized.
+					</p>
+				</div>
+				<div class="content">
+					<h3><i class="icon-file-code"></i>Code example:</h3>
+					<pre>
+						<code class="lang-php hljs">
+							class Db{
 
+								//Object constructor
+								function __construct(){
 
-								public function hello(){
+									$mysql_server = 'localhost';		//Host where the database is installed
+									$mysql_login = 'root';				//Username
+									$mysql_pass = 'mypass';				//Mysql user's password -- Not used in this example
+									$database_name = 'evcalculator';	//Name of the database that we want to connect
 
-									$ab = 1;
+									$this->rows = 0;					
 
-									return $ab;
+									$this->connection = mysqli_connect($mysql_server, $mysql_login);	//Establishing the connection
+									settype($this->conenction, 'boolean');
+									mysqli_select_db($this->connection, $database_name);				//Selecting the database
+
+									$this->database_selected = $database_name;							
+
 								}
+						</code>
+					</pre>
+				</div>
+				<div class="content">
+					<p>
+						In our constructor's example, we define the server, user, password and database name as four different variables and then we set a connection with the server through the <b>mysqli_connect()</b> function using that details. A different way to do this could be passing all the details as parameters when we instantiate the object. From my point of view, my method is quite better because if we want to change this details, we only have to change them here, and not in every declaration.
+					</p>
+					<p>
+						Also we have now defined three atributes:
+						<ul>
+							<li><b>$this->rows</b> : Saves the number of affected rows in the last query</li>
+							<li><b>$this->connection</b> : Saves the connection's status. Is equal to <b>true</b> when the connection with the database is successfully established.</li>
+							<li><b>$this->database_selected</b> : Saves the name of the current database that we are working with.</li>
+						</ul>
+					</p>
+				</div>
+			</article>
+			<article class="block-color">
+				<div class="content">
+					<h3><i class="icon-cog"></i>Check the connection, get the database name and change the current database</h3>
+					<p>
+						Now we are going to define three really simple easy to underestand methods. The first method will return the connection status. The second one will allow us to know the database we are working with and the third one will change the current database.
+					</p>
+				</div>
+				<div class="content">
+					<h3 class="icon-file-code">Code example:</h3>
+					<p>
+						<b>Checking the connection: </b>
+					</p>
+					<pre>
+						<code class="lang-php hljs">
 
-								//This is PHP
+							/**
+							*
+							**This method returns the connection status
+							*
+							*@return boolean status Connection status
+							*
+							*/
+							public function check_connection(){
 
-								$c = 0; 
+								$status = (mysqli_connect_error()) ? false : true;
 
-								$a = $c + 3;
+								return $status;
 
-								echo $a;
+							}
 
-							</code>
-						</pre>
-					</p>				
+						</code>
+					</pre>
+					<p>
+						<b>Getting the current database: </b>
+					</p>
+					<pre>
+						<code class="lang-php hljs">
+
+							/**
+							*
+							*This method returns the selected database name
+							*
+							*@return string $this->database_selected name of the current database in use
+							*
+							*/
+							public function get_database(){
+
+								return $this->database_selected;
+							}
+
+						</code>
+					</pre>
+					<p>
+						<b>Changing the current database: </b>
+					</p>
+					<pre>
+						<code class="lang-php hljs">
+
+							/**
+							*
+							*This method change the current database
+							*
+							*@param string $database_name Name of the new database
+							*@return boolean $this->database_selected Status of the new database change
+							*
+							*/
+							public function change_database($database_name){
+
+								$status = false;
+
+								if(!is_string($database_name))
+									return $status;
+
+								if(mysqli_select_db($this->connection, $database_name)){
+									$this->database_selected = $database_name;
+									$status = true;
+								}
+								
+								return $status;
+							}
+
+						</code>
+					</pre>
+					<p>
+						The first two methods are quite simple and I think that they are explained by themselves. The third one gets the name of the new database by parameter and tries to change the current database using the<b> mysqli_select_db()</b> function. If the database if successfully changed, the attribute <b>$this->database_selected</b> is updated with the name of the new database.
+					</p>
+				</div>
+			</article>
+			<article class="block-color">
+				<div class="content">
+					<h3><i class="icon-cog"></i>Execute a query</h3>
+					<p>
+						Now let's start with more serious stuff. We are going to define a method to execute a query in out database. This method will not return any result or data, only executes a query if the query is correct, obiously.
+					</p>
+				</div>
+				<div class="content">
+					<h3><i class="icon-file-code"></i>Code example:</h3>
+					<pre>
+						<code class="lang-php hljs">
+
+							/**
+							*
+							*This method execute a query in our current database
+							*
+							*@param string $query Query to execute
+							*@return boolean $status Status of the executed query
+							*
+							*/
+							public function query($query){
+
+								$status = false;
+
+								if(!is_string($query))
+									return $status;
+
+								$status = (mysqli_query($this->connection, $query)) ? true : false;
+								$rows = ($status) ? mysqli_affected_rows($this->connection) : false;
+								$this->rows = (!$rows) ? $rows : $this->rows;
+
+								return $status;
+							}
+
+						</code>
+					</pre>
+					<p>
+						We send the query as a parameter and the the query is executed by the <b>mysql_query()</b> function. Then we check the number of rows affected by the query only if It was correct. If so, we updated our <b>$this->rows</b> value with the number of the rows affected by the query.
+					</p>
+				</div>
 			</article>
 		</section>
 		<footer>

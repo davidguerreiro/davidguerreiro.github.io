@@ -10,17 +10,18 @@ class Db{
 	//Object constructor
 	function __construct(){
 
-		$mysql_server = 'localhost';
-		$mysql_login = 'root';
-		$database_name = 'evcalculator';
+		$mysql_server = 'localhost';		//Host where the database is installed
+		$mysql_login = 'root';				//Username
+		$mysql_pass = 'mypass';				//Mysql user's password -- Not used in this example
+		$database_name = 'evcalculator';	//Name of the database that we want to connect
 
-		$this->rows = 0;
+		$this->rows = 0;					
 
-		$this->connection = mysqli_connect($mysql_server, $mysql_login);
+		$this->connection = mysqli_connect($mysql_server, $mysql_login);	//Establishing the connection
 		settype($this->conenction, 'boolean');
-		mysqli_select_db($this->connection, $database_name);
+		mysqli_select_db($this->connection, $database_name);				//Selecting the database
 
-		$this->database_selected = $database_name;
+		$this->database_selected = $database_name;							
 
 	}
 
@@ -56,7 +57,7 @@ class Db{
 	*This method change the current database
 	*
 	*@param string $database_name Name of the new database
-	*@return boolean $this->database_selected Stautus of the new database change
+	*@return boolean $this->database_selected Status of the new database change
 	*
 	*/
 	public function change_database($database_name){
