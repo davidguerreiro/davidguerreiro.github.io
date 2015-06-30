@@ -112,6 +112,13 @@ class Db{
 		if(!is_string($query))
 			return $status;
 
+		//If this is a select query, then it should start with 'select' + the query
+
+		$control = explode(" ", $query);
+
+		if($control[0] != 'select')
+			return $status;
+
 		$ex = mysqli_query($this->connection, $query);
 
 		if($ex){
@@ -148,6 +155,13 @@ class Db{
 		$status = false;
 
 		if(!is_string($query))
+			return $status;
+
+		//If this is a select query, then it should start with 'select' + the query
+
+		$control = explode(" ", $query);
+
+		if($control[0] != 'select')
 			return $status;
 
 		if(!strpos($query, ' LIMIT'))
@@ -191,11 +205,19 @@ class Db{
 		if(!is_string($query))
 			return $status;
 
+		//If this is a select query, then it should start with 'select' + the query
+
+		$control = explode(" ", $query);
+
+		if($control[0] != 'select')
+			return $status;
+
 		//check if it is a count query
 
 		$check = strpos($query, 'count');
 
 		if($check !== false){
+			
 			//count query
 
 			$ex = mysqli_query($this->connection, $query);
