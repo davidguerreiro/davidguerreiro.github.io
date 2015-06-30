@@ -235,5 +235,11 @@ footer{
 	width: 33%;
 	}
 
+	.article-title{
+		font-size: 2em;
+		line-height: 1.3;
+	}
+
+
 
 }
