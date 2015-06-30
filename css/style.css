@@ -180,6 +180,12 @@ pre{
 	margin: 0 auto;
 }
 
+.article-author{
+	text-align: right;
+	font-style: italic;
+	font-size: 0.9em;
+}
+
 /*links into text*/
 p a{
 	text-decoration: none;
