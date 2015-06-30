@@ -322,8 +322,8 @@ class Db{
 
 		}
 
-	return $status;
-}
+		return $status;
+	}
 						</code>
 					</pre>
 				</div>
@@ -397,7 +397,7 @@ class Db{
 				<div class="content">
 					<h3><i class="icon-cog"></i>Getting a single value</h3>
 					<p>
-						If we have a query which should return a single value (for example, a select count query or something similar) then we should have a method to get that value quickly. Maybe you are thinking that this method could be needless because we can do exactly the same using the methods describe before. The truth is that It would be a waste of time and means to get unnecessary data if we only need one singe value, that's why even if the other methods allow us to get exactly the same data, this method should be better in terms of performance because we are only returned the single value that we are looking for.
+						If we have a query which should return a single value (for example, a select count query or something similar) then we should have a method to get that value quickly. Maybe you are thinking that this method could be needless because we can do exactly the same using the methods describe before. The truth is that It would be a waste of time and means to get unnecessary data if we only need one single value. Even if the other methods allow us to get exactly the same data, this method should be better in terms of performance because we are only returned the single value that we are looking for.
 					</p>
 				</div>
 				<div class="content">
