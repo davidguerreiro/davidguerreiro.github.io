@@ -127,7 +127,7 @@ class Db{
 						In our constructor's example, we define the server, user, password and database name as four different variables and then we set a connection with the server through the <b>mysqli_connect()</b> function using that details. A different way to do this could be passing all the details as parameters when we instantiate the object. From my point of view, my method is quite better because if we want to change this details, we only have to change them here, and not in every declaration.
 					</p>
 					<p>
-						Also we have now defined three atributes:
+						Also we have now defined three attributes:
 						<ul>
 							<li><b>$this->rows</b> : Saves the number of affected rows in the last query</li>
 							<li><b>$this->connection</b> : Saves the connection's status. Is equal to <b>true</b> when the connection with the database is successfully established.</li>
