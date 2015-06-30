@@ -105,20 +105,20 @@ class Db{
 	//Object constructor
 	function __construct(){
 
-	$mysql_server = 'localhost';		//Host where the database is installed
-	$mysql_login = 'root';				//Username
-	$mysql_pass = 'mypass';				//Mysql user's password -- Not used in this example
-	$database_name = 'evcalculator';	//Name of the database that we want to connect
+		$mysql_server = 'localhost';		//Host where the database is installed
+		$mysql_login = 'root';				//Username
+		$mysql_pass = 'mypass';				//Mysql user's password -- Not used in this example
+		$database_name = 'evcalculator';	//Name of the database that we want to connect
 
-	$this->rows = 0;					
+		$this->rows = 0;					
 
-	$this->connection = mysqli_connect($mysql_server, $mysql_login);	//Establishing the connection
-	settype($this->conenction, 'boolean');
-	mysqli_select_db($this->connection, $database_name);				//Selecting the database
+		$this->connection = mysqli_connect($mysql_server, $mysql_login);	//Establishing the connection
+		settype($this->conenction, 'boolean');
+		mysqli_select_db($this->connection, $database_name);				//Selecting the database
 
-	$this->database_selected = $database_name;							
+		$this->database_selected = $database_name;							
 
-}
+	}
 						</code>
 					</pre>
 				</div>
