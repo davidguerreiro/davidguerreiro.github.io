@@ -168,6 +168,11 @@ nav ul li{
 	margin-top: 0.5em;
 }
 
+.article-title{
+	font-size: 1.1em;
+	line-height: 5px;
+}
+
 /*links into text*/
 p a{
 	text-decoration: none;
