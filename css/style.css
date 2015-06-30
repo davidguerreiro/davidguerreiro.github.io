@@ -188,7 +188,7 @@ pre{
 }
 
 .code_example{
-	margin-top: 1.3em;
+	margin-top: 1.3em !important;
 }
 
 /*links into text*/
