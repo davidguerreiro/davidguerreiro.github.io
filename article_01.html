@@ -102,23 +102,23 @@
 						<code class="lang-php hljs">
 class Db{
 
-								//Object constructor
-								function __construct(){
+	//Object constructor
+	function __construct(){
 
-									$mysql_server = 'localhost';		//Host where the database is installed
-									$mysql_login = 'root';				//Username
-									$mysql_pass = 'mypass';				//Mysql user's password -- Not used in this example
-									$database_name = 'evcalculator';	//Name of the database that we want to connect
+	$mysql_server = 'localhost';		//Host where the database is installed
+	$mysql_login = 'root';				//Username
+	$mysql_pass = 'mypass';				//Mysql user's password -- Not used in this example
+	$database_name = 'evcalculator';	//Name of the database that we want to connect
 
-									$this->rows = 0;					
+	$this->rows = 0;					
 
-									$this->connection = mysqli_connect($mysql_server, $mysql_login);	//Establishing the connection
-									settype($this->conenction, 'boolean');
-									mysqli_select_db($this->connection, $database_name);				//Selecting the database
+	$this->connection = mysqli_connect($mysql_server, $mysql_login);	//Establishing the connection
+	settype($this->conenction, 'boolean');
+	mysqli_select_db($this->connection, $database_name);				//Selecting the database
 
-									$this->database_selected = $database_name;							
+	$this->database_selected = $database_name;							
 
-								}
+}
 						</code>
 					</pre>
 				</div>
@@ -151,20 +151,20 @@ class Db{
 					<pre>
 						<code class="lang-php hljs">
 
-							/**
-							*
-							**This method returns the connection status
-							*
-							*@return boolean status Connection status
-							*
-							*/
-							public function check_connection(){
+	/**
+	*
+	**This method returns the connection status
+	*
+	*@return boolean status Connection status
+	*
+	*/
+	public function check_connection(){
 
-								$status = (mysqli_connect_error()) ? false : true;
+		$status = (mysqli_connect_error()) ? false : true;
 
-								return $status;
+		return $status;
 
-							}
+	}
 
 						</code>
 					</pre>
@@ -174,17 +174,18 @@ class Db{
 					<pre>
 						<code class="lang-php hljs">
 
-							/**
-							*
-							*This method returns the selected database name
-							*
-							*@return string $this->database_selected name of the current database in use
-							*
-							*/
-							public function get_database(){
+	/**
+	*
+	*This method returns the selected database name
+	*
+	*@return string $this->database_selected name of the current database in use
+	*
+	*/
+	public function get_database(){
 
-								return $this->database_selected;
-							}
+		return $this->database_selected;
+
+	}
 
 						</code>
 					</pre>
@@ -194,28 +195,28 @@ class Db{
 					<pre>
 						<code class="lang-php hljs">
 
-							/**
-							*
-							*This method change the current database
-							*
-							*@param string $database_name Name of the new database
-							*@return boolean $this->database_selected Status of the new database change
-							*
-							*/
-							public function change_database($database_name){
+	/**
+	*
+	*This method change the current database
+	*
+	*@param string $database_name Name of the new database
+	*@return boolean $this->database_selected Status of the new database change
+	*
+	*/
+	public function change_database($database_name){
 
-								$status = false;
+		$status = false;
 
-								if(!is_string($database_name))
-									return $status;
+		if(!is_string($database_name))
+			return $status;
 
-								if(mysqli_select_db($this->connection, $database_name)){
-									$this->database_selected = $database_name;
-									$status = true;
-								}
-								
-								return $status;
-							}
+		if(mysqli_select_db($this->connection, $database_name)){
+			$this->database_selected = $database_name;
+			$status = true;
+		}
+									
+		return $status;
+	}
 
 						</code>
 					</pre>
@@ -236,27 +237,28 @@ class Db{
 					<pre>
 						<code class="lang-php hljs">
 
-							/**
-							*
-							*This method execute a query in our current database
-							*
-							*@param string $query Query to execute
-							*@return boolean $status Status of the executed query
-							*
-							*/
-							public function query($query){
+	/**
+	*
+	*This method execute a query in our current database
+	*
+	*@param string $query Query to execute
+	*@return boolean $status Status of the executed query
+	*
+	*/
+	public function query($query){
 
-								$status = false;
+		$status = false;
 
-								if(!is_string($query))
-									return $status;
+		if(!is_string($query))
+			return $status;
 
-								$status = (mysqli_query($this->connection, $query)) ? true : false;
-								$rows = ($status) ? mysqli_affected_rows($this->connection) : false;
-								$this->rows = (!$rows) ? $rows : $this->rows;
+		$status = (mysqli_query($this->connection, $query)) ? true : false;
+		$rows = ($status) ? mysqli_affected_rows($this->connection) : false;
+		$this->rows = (!$rows) ? $rows : $this->rows;
 
-								return $status;
-							}
+		return $status;
+
+	}
 
 						</code>
 					</pre>
@@ -277,50 +279,51 @@ class Db{
 					<pre>
 						<code class="lang-php hljs">
 
-							/**
-							*
-							*This method returs either an array containg every row returned by the query or boolean *false if the query was wrong
-							*
-							*@param string $query A query to execute in out current database
-							*@return array $status || boolean $status An array containgin all rows or a boolean false
-							*
-							*/
-							public function get_results($query){
+	/**
+	*
+	*This method returs either an array containg every row returned by the query or boolean 
+	*false if the query was wrong
+	*
+	*@param string $query A query to execute in out current database
+	*@return array $status || boolean $status An array containgin all rows or a boolean false
+	*
+	*/
+	public function get_results($query){
 
-								$status = false;
+		$status = false;
 
-								if(!is_string($query))
-									return $status;
+		if(!is_string($query))
+			return $status;
 
-								//If this is a select query, then it should start with 'select' + the query
+		//If this is a select query, then it should start with 'select' + the query
 
-								$control = explode(" ", $query);
+		$control = explode(" ", $query);
 
-								if($control[0] != 'select')
-									return $status;
+		if($control[0] != 'select')
+			return $status;
 
-								$ex = mysqli_query($this->connection, $query);
+		$ex = mysqli_query($this->connection, $query);
 
-								if($ex){
+		if($ex){
 
-									
-									while($a = mysqli_fetch_assoc($ex)){
+										
+			while($a = mysqli_fetch_assoc($ex)){
 
-										$status[] = $a;
+				$status[] = $a;
 
-									}
-									
-									if(!is_array($status))
-										return false;
+			}
+										
+			if(!is_array($status))
+				return false;
 
-									$this->rows = mysqli_affected_rows($this->connection);
+			$this->rows = mysqli_affected_rows($this->connection);
 
-									return $status;
+			return $status;
 
-								}
+		}
 
-								return $status;
-							}
+	return $status;
+}
 						</code>
 					</pre>
 				</div>
