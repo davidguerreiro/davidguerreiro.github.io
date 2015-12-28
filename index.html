@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>David Guerreiro</title>
 		<meta charset="UTF-8">
+		<title>David Guerreiro</title>
 		<meta name="author" content="David Guerreiro">
-		<meta name="description" content="David Guerreiro Web developer based in London, specialized in HTML5, CSS3, JavaScript, PHP and MySQL Databases">
-		<meta name="keywords" content="web, development, HTML5, CSS3, JavaScript, Responsive Desing, PHP, MySQL, Databases, SEO">
+		<meta name="description" content="David Guerreiro Web developer">
+		<meta name="keywords" content="web, development, WordPress, HTML5, CSS3, JavaScript, Responsive Desing, PHP, MySQL, Databases, SEO">
 		<meta name="robots" content="all">
 		<meta name="generator" content="sublime text 2">
 		<meta name="language" content="eng">
@@ -13,92 +13,133 @@
 		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximun-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="./css/reset.css"><!--reset css-->
 		<link rel="stylesheet" type="text/css" href="./css/style.css"><!--Main css-->
+		<link rel="stylesheet" type="text/css" href="./css/css/font-awesome.min.css"><!--Font awesome icons css file-->
+		<link rel="stylesheet" type="text/css" href="./css/pictonic/css/pictonic.css"><!--Pictonic icons css file-->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans|Raleway' rel='stylesheet' type='text/css'>
 		<link rel="shortcut icon" href="./favicon/favicon.jpg" type="image/jpg">
 		<link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon">
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans|Francois+One' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="./fontello-2e50e4cf/css/fontello.css"><!--css que permite la carga de las fuentes de iconos-->
-	    <link rel="stylesheet" href="./fontello-2e50e4cf/css/animation.css"><!--[if IE 7]><link rel="stylesheet" href="css/iconos-ie7.css"><![endif]-->
 	</head>
 	<body>
-		<header>
-			<div class="content">
-				<h1>David Guerreiro</h1>
-				<h2>Web developer in London</h2>
+		<header class="header">
+			<nav class="menu_social_nav">
+				<ul class="menu_social">
+					<li><a href="https://twitter.com/Guerrebasket" target="_blank" title="Twitter" class="social_link twitter"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="https://github.com/davidguerreiro" target="_blank" title="GitHub" class="social_link github"><i class="fa fa-github"></i></a></li>
+					<li class="cv"><a href="#" title="Download my CV" target="_blank" class="social_link cv_link"><i class="fa fa-download"></i>Download CV</a></li>
+				</ul>
+			</nav>
+			<div class="title_content">
+				<h1>
+					David Guerreiro
+					<span class="h1_subtitle">Web Developer</span>
+				</h1>
 			</div>
+			<nav class="menu_main_nav">
+				<ul class="menu_main">
+					<li><a href="index.html" class="menu_link"><i class="fa fa-user"></i>About me</a></li>
+					<li><a href="work.html" class="menu_link"><i class="fa fa-file-code-o"></i>Work</a></li>
+				</ul>
+			</nav>
 		</header>
-		<section>
-			<nav>
-				<div>
-					<ul>
-						<li><a href="work.html" title="Work Experience" class="launcher"><i class="icon-right-big"></i>See my work<i class="icon-left-big"></i></a></li>
-					</ul>
-				</div>
-			</nav>
-			<article class="block-color">
-				<div class="content">
-					<h3><i class="icon-user"></i>About me</h3>
-					<p>
-						Hi! I'm <b>David Guerreiro</b>, a web developer based in London. I'm passionate about the web so I have moved to the UK in order to improve my skills as a web developer.
-					</p>
-					<p>
-						As a developer, I have always used the latest standards to develop websites in a professional way.I have spent most of my time working whit <b>PHP, MySQL, HTML5, CSS3, Javascript (including libraries like jQuery)</b> and sometimes with responsive design as well. I'm also developing a videogame as a side project.
-					</p>
-					<p>
-						I write code using <b>Sublime Text 2</b>. I keep my task organized using <b>Redbooth</b> and my code using <b>git</b>.
-					</p>
-					<p>
-						When I have to write code, I always keep it neat and tidy. This is something really important for me because is really annoying to fix a program when you can't understand the code. I always develop web sites either <b>from scratch</b> or using <b>WordPress</b>. In fact, I would consider myself as a <b>proficient WordPress developer</b> with a good skillset. 
-					</p>
-					<p>
-						I really love playing basketball in my spare time. 
-					</p>
-					<p>
-						 At the moment, <b>I'm looking for a web developer position</b>, so if you need someone, don't hesitate to contact me. You can either <a href="https://twitter.com/Guerrebasket" title="Twitter" target="_blank">fire me a tweet</a> or <a href="mailto:me@davidguerreiro.com" title="Developer mail">send me an e-mail</a>.
+		<div class="main">
+			<section>
+				<div class="introducction_text">
+					<p class="introducction_text paragraph">
+						I'm a web developer based in London. I love writting code. More backend than frontend but I like both. PHP is my main language and WordPress my favourite CMS. Working in some side projects on <a href="https://github.com/davidguerreiro" title="GitHub" class="inline_link">GitHub</a>
 					</p>
 				</div>
-			</article>
-			<article class="block-color">
-				<div class="content">
-					<h3><i class="icon-file-code"></i>Skills</h3>
-					<p>
-						The language I have experience the most is PHP. Although, working as a web developer, I have dealt with many more technologies like:
-						<ul>
-							<li><b>PHP</b>: I have always developed dedicated CMS from the ground up, using pure PHP. In addition, I have used well-known libraries, like PrestaShop and WordPress.</li>
-							<li><b>MySQL</b>: I have developed robust databases schemes and ER Models. In my opinion, the design of the database is really important. An application with a bad database scheme can't work properly. I have strong knowledge about SQL language as well.</li> 
-							<li><b>HTML5</b>: I have been focused in write a SEO-friendly HTML, using the latest standard of this language. Also I always keep the content separated for the design.</li>
-							<li><b>CSS3</b>: My CSS code is always well commented and tidy. I worry about it being cross-browser and responsive.</li>
-							<li><b>JavaScript</b>:I have experience with core Javascript, but I have mainly worked with JQuery. I know how to implement any kind of plugin when I need one.</li>
-							<li><b>WordPress</b>: I have a full understanding about WordPress procedures and how to deal with it. I know either how to resolve any problem or implement any solution in both site / admin side by just theming or developing a new plugin.</li>
-						</ul>
+					<p class="paragraph">
+						These are the range of technologies I have worked the most:
 					</p>
-				</div>
-			</article>
-			<article class="block-color">
-				<div class="content">
-					<h3><i class="icon-up"></i>Aspirations</h3>
-					<p>
-						At the moment, I would like to work in a company which worries about the way they deal with code and how they keep up-to-date. Also I would like to spend my time working with high-end developers who have more experience than me. I think that this is a good way to both improve as a web developer and share new ideas and methods about developing.
-					</p>
-					<p>
-					 	I would prefer to work in a small company that I can grow with rather than a big one. There are better ways to communicate between the workmates. I enjoy attending conferences about the latest standards of technology.
-					</p>
-					<p>
-						Therefore, I aim to work with the best professionals here in London in order to gain more experience. That's what I really want to do.
-					</p>
-				</div>
-			</article>
-			<nav>
-				<div>
-					<ul>
-						<li><a href="article_01.html" title="Read my last article" class="launcher"><i class="icon-right-big"></i>Read my last article<i class="icon-left-big"></i></a></li>
-					</ul>
-				</div>
-			</nav>
-		</section>
+			</section>
+			<section>
+				<header class="section_header">
+					<h2 class="skill_title html_title">HTML</h2>
+					<progress value="90" max="100" class="html_bar">90</progress>
+				</header>
+				<ul class="tech_points left">
+					<li>Full understanding of the HTML 5 standard</li>
+					<li>Experiencie writting HTML oriented to responsive sites</li>
+					<li>Experience writting SEO friendly HTML code</li>
+					<li>Confident with accesibility and usability standars</li>
+				</ul>
+			</section>
+			<section>
+				<header class="section_header">
+					<h2 class="skill_title css_title">CSS</h2>
+					<progress value="75" max="100" class="css_bar"></progress>
+				</header>
+				<ul class="tech_points left">
+					<li>Confident with Responsive Web Design implementation using CSS3 media queries</li>
+					<li>Experience with OOCSS</li>
+					<li>Confident with Mobile First Approach</li>
+					<li>I'm able to understand CSS Style Guides and implement it successfully</li>
+				</ul>
+			</section>
+			<section>
+				<header class="section_header">
+					<h2 class="skill_title js_title">JavaScript</h2>
+					<progress value="55" max="100" class="js_bar"></progress>
+				</header>
+				<ul class="tech_points left">
+					<li>Experience with both JQuery and pure JavaScript</li>
+					<li>Able to implement any kind of plugin</li>
+					<li>Experience working with OOPJS</li>
+					<li>Experience working with APIs based in JS like Google Maps</li>
+				</ul>
+			</section>
+			<section>
+				<header class="section_header">
+					<h2 class="skill_title php_title">PHP</h2>
+					<progress value="90" max="100" class="php_bar"></progress>
+				</header>
+				<ul class="tech_points left">
+					<li>My main language, I have one year and a half experience working with PHP</li>
+					<li>Confident with all OOP procedures</li>
+					<li>Able to integrate any web service based in PHP</li>
+				</ul>
+			</section>
+			<section>
+				<header class="section_header">
+					<h2 class="skill_title wp_title">WordPress</h2>
+					<progress value="85" max="100" class="wp_bar"></progress>
+				</header>
+				<ul class="tech_points left">
+					<li>Experience developing a theme or plugin from scratch</li>
+					<li>Able to solve any problem in both fornt / admin side</li>
+					<li>I can adapt or modify any kind of theme in order to suit your needs</li>
+				</ul>
+			</section>
+			<section>
+				<header class="section_header">
+					<h2 class="skill_title sql_title">SQL</h2>
+					<progress value="70" max="100" class="sql_bar"></progress>
+				</header>
+				<ul class="tech_points left">
+					<li>I have always worked with MySQL databases</li>
+					<li>Experience working with MySQLi</li>
+					<li>Experience working through the console via commands</li>
+					<li>Able to design an Entity relationship model and full Databases for mid / large projects</li>
+				</ul>
+			</section>
+			<section>
+				<header class="section_header">
+					<h2 class="skill_title extra_title">Other Skills</h2>
+				</header>
+				<ul class="tech_points left">
+					<li><b>Ajax</b> (implementation using JQuery and JSON)</li>
+					<li><b>Web Services</b> (RestFull API)</li>
+					<li>Using <b>Git</b> or other subversion system to track my work and make commits in order to share it with the rest of the team</li>
+					<li><b>Canvas</b> (basic implementation with HTML5 and JS)</li>
+					<li><b>Web Performance</b> (I have experience making webs a little bit faster using proper responsive images and some other tricks)</li>
+					<li><b>Google APIs</b> usage and implementation</li>
+					<li>Some <b>SEO friendly good practices</b> related with coding and HTML usage</li>
+				</ul>
+			</section>
+		</div>
 		<footer>
-			<div class="content">
-				<p>  &copy; 2015 David Guerreiro</p>
-			</div>
+			<p class="left"> &copy; 2016 David Guerreiro</p>
+			<p class="left">This site is hosted in <a href="https://github.com/davidguerreiro" title="See this repository in Github" class="footer_link"><i class="fa fa-github footer_icon"></i>Github</a>
 		</footer>
 	</body>
 </html>

@@ -1,257 +1,361 @@
-/*CSS file from davidguerreiro.com . Written by David R. Guerreiro*/
 
-/*GENERAL--------------------------------------------------------------------------------------------------*/
-*{
-	box-sizing: border-box;
-}
+/*General*/
 
 body{
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1em;
 }
 
-.content{
-	/*max width*/
-	max-width: 1100px;
-	margin: 0 auto;
-	padding: 0 2em;
-}
-
-.content ul li{
-	list-style-type: square;
-	padding: 1em 0;
-}
-
-.work{
-	/*this class takes float elements in work divs*/
-	clear: both;
-	padding: 2em 0;
-}
-
-
-.work img{
-	/*class for work experience*/
-	width: 100%;
-}
-
-
-
-.work-list{
-	/*this class takes all work divs*/
-	padding-bottom: 1em;
-	padding-top: 1em;
-}
-
-.content i{
-	/*i for h3 sections*/
-	padding-right: 0.5em;
-}
-
 h1, h2, h3, h4, h5, h6{
 	line-height: 1;
 }
 
-img{
-	max-width: 100%;
-	display: inline-block;
-}
-
-/*---------------------------------------------------------------------------------------------------------*/
-/*HEADER---------------------------------------------------------------------------------------------------*/
-
-header{
-	text-align: center;
-	background-color: #241858;
-	padding: 3em 0;
-}
-
-/*main title*/
-header h1{
-	font-family: 'Francois One', sans-serif;
-	font-size: 2.25em;
-	color: white;
-	margin: 0 0 .25em 0;
-}
-
-/*header subtitle*/
-header h2{
-	font-size: 1.25em;
-	color: white;
-	margin: 0 0 .25em 0;
-}
-
-nav{
-	width: 100%;
-	display: inline-block;
-	background-color: #5F5293;
-}
-
-nav ul{
-	padding: 0;
+ul{
 	margin: 0;
+	padding: 0;
+}
+
+p{
+	margin: 0;
+}
+
+section:nth-child(2n){
+	background-color: #F2F2F2; 
+}
+
+.left{
+	margin-left: 1em;
+}
+
+.main{
+	display: block;
+	background-color: white;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+body{
+	background-color: #A9BCF5;
+}
+
+/*Header*/
+
+.menu_social_nav{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1000;
+}
+
+.menu_social{
+	clear: both;
+	overflow: hidden;
+	background-color: #050101;
+}
+
+.menu_social li{
+	float: right;
+	padding: 0.5em;
+}
+
+.menu_social i{
+	color: white;
+	font-size: 1.1em;
+}
+
+.cv{
+	float: left !important;
+}
+
+.cv i, .menu_main i{
+	padding-right: 0.5em;
+}
+
+.title_content{
+	margin-top: 35px;
+	background-color: #084B8A;
+}
+
+h1{
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+	color: white;
+	padding: 0.5em 0;
+}
+
+.h1_subtitle{
+	display: block;
+	font-size: 0.6em;
+	padding-top: 0.5em;
+}
+
+.menu_main{
+	clear: both;
+	overflow: hidden;
+	background-color: #2E2E2E;
 	list-style-type: none;
 }
-nav ul li{
-	padding: 0;
-	margin: 0;
+
+.menu_main li{
+	float: left;
+	width: 50%;
 }
 
-/*link style*/
-.launcher{
+/*body*/
+
+.paragraph{
 	display: block;
-	padding: 1em 0;
-	text-decoration: none; 
-	font-size: 1em; 
-	color: white; 
-	background-color: transparent; 
-	font-weight: bold; 
-	-moz-transition: all .5s; 
-	-webkit-transition: all .5s;
-	transition: all .5s;
-	text-align: center;
+	text-align: left;
+	width: 90%;
+	max-width: 420px;
+	padding: 1em 0 1em 1em;
+	margin-right: auto;
+	margin-left: auto;
 }
 
+.introducction_text{
+	background-color: #F2F2F2;
+}
 
-.launcher:visited{
+.skill_title{
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 0.1em 0 0.1em 0.2em;
+	font-size: 3em;
 	color: white;
 }
-.launcher:hover{
-	background-color: #413378; 
+
+.html_title{
+	background-color: #FACC2E;
 }
 
-/*main a arrow animation*/
-.launcher i{
-	opacity: 0;
-	-moz-transition: all .5s; 
-	-webkit-transition: all .5s;
-	transition: all .5s;
+.css_title{
+	background-color: #2E64FE;
 }
 
-.launcher:hover i{
-	opacity: 1;
+.js_title{
+	background-color: #DBA901;
 }
 
-.launcher .icon-right-big{
-	padding-right: 0.5em;
-	transform: translateX(-1em);
+.php_title{
+	background-color: #4F5B93;
 }
 
-.launcher:hover .icon-right-big{
-	transform: translateX(0);	
+.sql_title{
+	background-color: #9AFE2E;
 }
 
-.launcher .icon-left-big{
-	padding-left: 0.5em;
-	transform: translateX(1em);
+.wp_title{
+	background-color: #0431B4;	
 }
 
-.launcher:hover .icon-left-big{
-	transform: translateX(0);
+.extra_title{
+	background-color: #04B486;
 }
 
 
-
-/*CONTENT-----------------------------------------------------------------------------------------------------*/
-
-/*background color 1*/
-.block-color{
-	padding: 1em 0;
-}
-
-.block-color:nth-child(2n+1){
-	background-color: #EBE6FF;
-}
-
-.block-color h3{
-	font-family: 'Francois One', sans-serif;
-	color: #18075E;
-	margin-top: 0.5em;
-}
-
-.article-title{
-	font-family: 'Francois One', sans-serif;
-	color: #18075E;
-	font-size: 1.5em;
-	line-height: 1.3;
-}
-
-pre{
+progress{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: none;
 	width: 100%;
-	margin: 0 auto;
+	height: 45px;
 }
 
-.article-author{
-	text-align: right;
-	font-style: italic;
-	font-size: 0.9em;
-	margin: 1.5em 1.5em 1.5em 0;
+progress::-webkit-progress-value{
+	background-image:
+    -webkit-linear-gradient(
+      135deg, 
+      transparent 33%, 
+      rgba(0, 0, 0, 0.1) 33%, 
+      rgba(0, 0, 0, 0.1) 66%, 
+      transparent 66% 
+    ),
+    -webkit-linear-gradient(
+      top, 
+      rgba(255, 255, 255, 0.25), 
+      rgba(0, 0, 0, 0.25)
+    ),
+    -webkit-linear-gradient(
+      left, 
+      #09c, 
+      #f44
+    );
 }
 
-.code_example{
-	margin-top: 1.3em !important;
+progress::-webkit-progress-value::before {
+  font-size: 2em;
+  color: white;
+  padding-left: 0.5em;
 }
 
-/*links into text*/
-p a{
-	text-decoration: none;
-	font-weight: bold; 
-	color: #241858;
-	-moz-transition: all .5s; 
-	-webkit-transition: all .5s;
+.html_bar::-webkit-progress-value::before{
+	content: '90/100';
+}
+
+.css_bar::-webkit-progress-value::before{
+	content: '75/100';
+}
+
+.js_bar::-webkit-progress-value::before{
+	content: '55/100';
+}
+
+.php_bar::-webkit-progress-value::before{
+	content: '90/100';
+}
+
+.wp_bar::-webkit-progress-value::before{
+	content: '85/100';
+}
+
+.sql_bar::-webkit-progress-value::before{
+	content: '70/100';
+}
+
+progress::-webkit-progress-bar{
+	 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress::-moz-progress-bar{
+	background-image:
+    -moz-linear-gradient(
+      135deg, 
+      transparent 33%, 
+      rgba(0, 0, 0, 0.1) 33%, 
+      rgba(0, 0, 0, 0.1) 66%, 
+      transparent 66% 
+    ),
+    -moz-linear-gradient(
+      top, 
+      rgba(255, 255, 255, 0.25), 
+      rgba(0, 0, 0, 0.25)
+    ),
+    -moz-linear-gradient(	
+      left, 
+      #09c, 
+      #f44
+    );
+
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+.tech_points{
+	list-style-type: circle;
+	padding: 1em 0 1em 0.8em;
+}
+
+.tech_points li{
+	padding: 1em 0 1em 0.3em;
 
 }
 
-p a:hover{
-	color: #5F5293; 
-}
-
-
-/*------------------------------------------------------------------------------------------------------------*/
-/*FOOTER------------------------------------------------------------------------------------------------------*/
+/*footer*/
 
 footer{
-	text-align: center;
-	background-color: #241858;
-	padding: 1em 0;
+	background-color: #2E2E2E;
 	color: white;
+	padding-top: 1em;
+}
+
+footer p{
+	padding-bottom: 1em;
+}
+
+.footer_icon{
+	padding: 0 0.3em 0 0.3em;
 }
 
 
-/*------------------------------------------------------------------------------------------------------------*/
+/*links*/
 
-/*RESPONSIVE desktop and tablets-----------------------------------------------------------------------------*/
+.social_link, .menu_link{
+	text-decoration: none;
+	color: white;
+}
 
-@media all and (min-width: 640px) {
+.fa-twitter, .fa-github{
+	-moz-transition: color 0.5s ease;
+	-webkit-transition: color 0.5s ease;
+}
 
-	header {
-		padding: 4em 0;
+.fa-twitter:hover{
+	color: #21B1FA;
+}
+
+.fa-github:hover{
+	color: #A32FBA;
+}
+
+.title_content{
+	padding: 1.5em;
+	font-size: 0.9em;
+}
+
+.menu_link{
+	display: block;
+	padding: 0.5em;
+	text-align: center;
+	-moz-transition: background-color 0.5s ease;
+	-webkit-transition: background-color 0.5s ease;
+}
+
+.menu_link:hover{
+	background-color: #424242;
+
+}
+
+.inline_link, .footer_link{
+	text-decoration: none;
+	color: #7401DF;
+	-moz-transition: color 0.5s ease;
+	-webkit-transition: color 0.5s ease;
+}
+
+.footer_link{
+	color: #A901DB;
+}
+
+.inline_link:hover, .footer_link:hover{
+	color: #D358F7;
+}
+
+/*MEDIA QUERIES*/
+
+@media all and (min-width: 440px){
+
+	h1{
+		font-size: 2.4em;
 	}
-	header h1{
-		font-size: 4em;
-	}
-	header h2{
-		font-size: 2em;
+
+	.skill_title{
+		font-size: 3.5em;
 	}
 
-	.content{
-		padding: 0 3em;
+	.main{
+		max-width: 960px;
 	}
 
-	.block-color h3{
-		font-size:  1.50em;
+	.menu_main_nav{
+		background-color: #2E2E2E;
 	}
 
-	.work img{
-		/*class for work experience*/
-		float: left;
-		padding-right: 1.5em;
-		width: 33%;
+	.menu_main{
+		max-width: 960px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
+@media all and (min-width: 960px){
+
+	h1{
+		font-size: 3.2em;
 	}
 
-	.article-title{
-		font-size: 2em;
+	.paragraph{
+		margin-left: 1em;
 	}
-
-
-
 }
