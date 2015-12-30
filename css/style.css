@@ -20,7 +20,7 @@ p{
 }
 
 section:nth-child(2n){
-	background-color: #F2F2F2; 
+	background-color: #D8D8D8; 
 }
 
 .left{
@@ -108,20 +108,19 @@ h1{
 	text-align: left;
 	width: 90%;
 	max-width: 420px;
-	padding: 1em 0 1em 1em;
+	padding: 1.5em 0 1.5em 1em;
 	margin-right: auto;
 	margin-left: auto;
 }
 
 .introducction_text{
-	background-color: #F2F2F2;
+	background-color: #D8D8D8;
 }
 
 .skill_title{
 	position: relative;
-	display: block;
 	margin: 0;
-	padding: 0.1em 0 0.1em 0.2em;
+	padding: 0.2em;
 	font-size: 3em;
 	color: white;
 }
@@ -154,6 +153,9 @@ h1{
 	background-color: #04B486;
 }
 
+.skill_title_icon{
+	display: none !important;
+}
 
 progress{
 	-webkit-appearance: none;
@@ -243,11 +245,11 @@ progress::-moz-progress-bar{
 }
 
 .tech_points{
-	list-style-type: circle;
-	padding: 1em 0 1em 0.8em;
+	padding: 1em 0 1em 1.5em;
 }
 
 .tech_points li{
+	list-style-type: circle;
 	padding: 1em 0 1em 0.3em;
 
 }
@@ -357,5 +359,37 @@ footer p{
 
 	.paragraph{
 		margin-left: 1em;
+	}
+
+	.skill_title_icon{
+		display: inline !important;
+	}
+
+	.html5_icon{
+		padding-left: 720px;
+	}
+
+	.css3_icon{
+		padding-left: 775px;
+	}
+
+	.wp_icon{
+		padding-left: 590px;
+	}
+
+	.js_icon{
+		padding-left: 620px;
+	}
+
+	.php_icon{
+		padding-left: 765px;
+	}
+
+	.sql_icon{
+		padding-left: 780px;
+	}
+
+	.extra_icon{
+		padding-left: 575px;
 	}
 }
