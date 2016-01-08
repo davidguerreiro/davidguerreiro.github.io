@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>David Guerreiro</title>
 		<meta charset="UTF-8">
+		<title>David Guerreiro</title>
 		<meta name="author" content="David Guerreiro">
-		<meta name="description" content="Web developer who lives in London, specialized in HTML5, CSS3, JavaScript, PHP and MySQL Databases">
-		<meta name="keywords" content="web, development, HTML5, CSS3, JavaScript, Responsive Desing, PHP, MySQL, Databases, SEO">
+		<meta name="description" content="David Guerreiro Web developer">
+		<meta name="keywords" content="web, development, WordPress, HTML5, CSS3, JavaScript, Responsive Desing, PHP, MySQL, Databases, SEO">
 		<meta name="robots" content="all">
 		<meta name="generator" content="sublime text 2">
 		<meta name="language" content="eng">
@@ -13,84 +13,97 @@
 		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximun-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="./css/reset.css"><!--reset css-->
 		<link rel="stylesheet" type="text/css" href="./css/style.css"><!--Main css-->
+		<link rel="stylesheet" type="text/css" href="./css/css/font-awesome.min.css"><!--Font awesome icons css file-->
+		<link rel="stylesheet" type="text/css" href="./css/pictonic/css/pictonic.css"><!--Pictonic icons css file-->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans|Raleway' rel='stylesheet' type='text/css'>
 		<link rel="shortcut icon" href="./favicon/favicon.jpg" type="image/jpg">
 		<link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon">
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans|Francois+One' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="./fontello-2e50e4cf/css/fontello.css"><!--css que permite la carga de las fuentes de iconos-->
-	    <link rel="stylesheet" href="./fontello-2e50e4cf/css/animation.css"><!--[if IE 7]><link rel="stylesheet" href="css/iconos-ie7.css"><![endif]-->
 	</head>
 	<body>
-		<header>
-			<h1>David Guerreiro</h1>
-			<h2>Web developer in London</h2>
+		<header class="header">
+			<nav class="menu_social_nav">
+				<ul class="menu_social">
+					<li><a href="https://twitter.com/Guerrebasket" target="_blank" title="Twitter" class="social_link twitter"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="https://github.com/davidguerreiro" target="_blank" title="GitHub" class="social_link github"><i class="fa fa-github"></i></a></li>
+					<li class="cv"><a href="#" title="Download my CV" target="_blank" class="social_link cv_link"><i class="fa fa-download"></i>Download CV</a></li>
+				</ul>
+			</nav>
+			<div class="title_content">
+				<h1>
+					David Guerreiro
+					<span class="h1_subtitle">Web Developer</span>
+				</h1>
+			</div>
+			<nav class="menu_main_nav">
+				<ul class="menu_main">
+					<li><a href="index.html" class="menu_link"><i class="fa fa-user"></i>About me</a></li>
+					<li><a href="work.html" class="menu_link"><i class="fa fa-file-code-o"></i>Work</a></li>
+				</ul>
+			</nav>
 		</header>
-		<section>
-			<nav>
-				<div>
-					<ul>
-						<li><a href="index.html" title="Home" class="launcher"><i class="icon-right-big"></i>See my profile<i class="icon-left-big"></i></a></li>
-					</ul>
-				</div>
-			</nav>
-			<article class="block-color">
-				<div class="content work-list">
-					<p>
-						These are the most worth-mentionable websites I've built. All of them have been built from scratch, with me in charge of both front-end and back-end development.
+		<div class="main">
+			<section>
+				<div class="introducction_text">
+					<p class="introducction_text paragraph">
+						This section contains several examples about all the main projects that I have worked with. Most of them have been fully developed by myself.
 					</p>
-					<div class="work">
-						<a href="http://69.89.31.205/~pcocasio/psp_informatica/index.php" title="See the page" target="_blank"><img src="./images/psp_2.jpg" alt="psp_web_image"></a>
-						<h3><i class="icon-cog"></i>PSP-Informática</h3>
-						<p>
-							PSP-Informática is a spanish IT company focused on computer maintenance. They are both selling computer related products and ofering different IT servicies.
+				</div>
+			</section>
+			<section>
+				<header class="section_header">
+					<h2 class="skill_title php_title work_title">Marussia Beberages</h2>
+				</header>
+				<div class="work_wrapper">
+					<img src="images/marussia_1.jpg" class="work_img">
+					<div class="work_details_wrapper">
+						<p class="work_details_text paragraph">
+							Developed as a part of my work in <a href="http://www.basecreative.co.uk/" title="Check the site of this company" target="_blank" class="work_inline_link">BaseCreative</a>
 						</p>
-						<p>
-							This website was made from scratch. The desing is classic, keeping a formal structure. This web page is used to provide further information about the servicies that the company is offering now. They can also both get in contact with the company and dowload some antivirus trial versions.
-						</p>
-						<p>
-							Link to the website: <a href="http://69.89.31.205/~pcocasio/psp_informatica/index.php" title="See the page" target="_blank">PSP-Informática</a>
-						</p>
-					</div>
-					<div class="work">
-						<a href="http://auladefotografiasubterranea.com" title="See the page" target="_blank"><img src="./images/aula_2.jpg" alt="aula_web_image"></a>
-						<h3><i class="icon-cog"></i>Aula de Fotografía Subterránea (Work in progress)</h3>
-						<p>
-							"Aula de Fotografía Subterránea" is a group based in Spain. They are making trips and exploring differents caves and mountains and taking photos as well. Therefore, they need also and space online to show both their activities and the photos they have taken.
-						</p>
-						<p>
-							So this web page is a blog that I have built from scratch. There are two differents parts in this web: the blog side, where you can see the post, send comments and more, and the managment side, where the admins can publish a post, add a new administrator and more options. I have made the whole CMS from the ground up mainly with PHP. 
-						</p>
-						<p>
-							I'm working in this website now so don't worry if you see that any section is not operative at the moment.
-						</p>
-						<p>
-							Link to the website: <a href="http://auladefotografiasubterranea.com" title="See the page" target="_blank">Aula de Fotografía Subterránea</a>
-						</p>
-					</div>
-					<div class="work">
-						<a href="http://pc-ocasion.com" title="See the page" target="_blank"><img src="./images/montearenas_2.jpg" alt="mont_web_image"></a>
-						<h3><i class="icon-cog"></i>Montearenas</h3>
-						<p>
-							Montearenas is another spanish IT company focused on fixing both secondhand and new devices and computer accesories. Then they sell it through eBay and this web page.
-						</p>
-						<p>
-							They told me that they wanted an e-shop and this one has to be made with PrestaShop. This is the only web page I have done with a framework, and dealing with PrestaShop was really an experience for me. Anyway, I was only in charge of the CSS part. Also I had to develop some functions with PHP.  
-						</p>
-						<p>
-							Link to the website: <a href="http://pc-ocasion.com" title="See the page" target="_blank">Montearenas</a>
-						</p>
+						<div class="work_links_wrapper">
+							<a href="marussia.html" class="work_link" title="Read more about this project">Find out more</a>
+							<a href="http://www.marussiabeverages.co.uk/" class="work_link" title="Visit this site" target="_blank">Visit this site</a>
+						</div>
 					</div>
 				</div>
-			</article>
-			<nav>
-				<div>
-					<ul>
-						<li><a href="article_01.html" title="Read my last article" class="launcher"><i class="icon-right-big"></i>Read my last article<i class="icon-left-big"></i></a></li>
-					</ul>
+			</section>
+			<section>
+				<header class="section_header">
+					<h2 class="skill_title php_title work_title">PSP-Informática</h2>
+				</header>
+				<div class="work_wrapper"> 
+					<img src="images/psp_1.jpg" class="work_img">
+					<div class="work_details_wrapper">
+						<p class="paragraph">
+							Developed as a part of my work in <a href="http://69.89.31.205/~pcocasio/psp_informatica/index.php" title="Check the title of this company" target="_blank" class="work_inline_link">PSP-Informática</a>
+						</p>
+						<div class="work_links_wrapper">
+							<a href="psp.html" class="work_link" title="Read more about this project">Find out more</a>
+							<a href="http://69.89.31.205/~pcocasio/psp_informatica/index.php" class="work_link" title="Visit this site" target="_blank">Visit this site</a>
+						</div>
+					</div>
 				</div>
-			</nav>
-		</section>
+			</section>
+			<section>
+				<header class="section_header">
+					<h2 class="skill_title php_title work_title">Aula de Fotografía Subterranea</h2>
+				</header>
+				<div class="work_wrapper">
+					<img src="images/aula_1.jpg" class="work_img">
+					<div class="work_details_wrapper">
+						<p class="paragraph">
+							Developed as a part of my freelance work
+						</p>
+						<div class="work_links_wrapper">
+							<a href="psp.html" class="work_link" title="Read more about this project">Find out more</a>
+							<a href="http://www.auladefotografíasubterranea.com" class="work_link" title="Visit this site" target="_blank">Visit this site</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
 		<footer>
-			<p>  &copy; 2015 David Guerreiro</p>
+			<p class="left"> &copy; 2016 David Guerreiro</p>
+			<p class="left">This site is hosted in <a href="https://github.com/davidguerreiro" title="See this repository in Github" class="footer_link"><i class="fa fa-github footer_icon"></i>Github</a>
 		</footer>
 	</body>
 </html>
