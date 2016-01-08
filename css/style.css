@@ -469,6 +469,7 @@ footer p{
 
 	.work_img, .work_details_wrapper{
 		float: left;
+		height: 300px;
 	}
 
 	.work_details_wrapper{
