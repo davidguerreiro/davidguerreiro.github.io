@@ -18,6 +18,8 @@
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans|Raleway' rel='stylesheet' type='text/css'>
 		<link rel="shortcut icon" href="./favicon/favicon.jpg" type="image/jpg">
 		<link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon">
+		<script type="text/javascript" src="./js/scripts.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	</head>
 	<body>
 		<header class="header">
@@ -42,68 +44,50 @@
 			</nav>
 		</header>
 		<div class="main">
-			<section>
-				<div class="introducction_text">
-					<p class="introducction_text paragraph">
-						This section contains several examples about all the main projects that I have worked with. Most of them have been fully developed by myself.
-					</p>
+			<div class="work_wrapper">
+				<div class="work_container">
+					<h2 class="work_h2 employee_1">As an employee</h2>
+					<ul class="work_ul_title employee_2">
+						<li>
+							<a href="javascript:void(0)" title="See more about this work example" class="work_li_title_link" onclick="info_display(0)">Marusia Beberages</a>
+							<ul class="work_ul_options employee_3" id="ul_0">
+								<li><a href="./work/enployee/marussia.html" title="Find out more about this work example" class="work_li_options_link">Find out more</a></li>
+								<li><a href="http://wwww.marussiabeverages.co.uk" title="Visit this site" class="work_li_options_link" target="_blank">Visit this site</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:void(0)" title="See more about this work example" class="work_li_title_link" onclick="info_display(1)">Ownfone</a>
+							<ul class="work_ul_options employee_3" id="ul_1">
+								<li><a href="./work/enployee/ownfone.html" title="Find out more about this work example" class="work_li_options_link">Find out more</a></li>
+								<li><a href="http://www.ownfone.com/" title="Visit this site" class="work_li_options_link" target="_blank">Visit this site</a></li>
+							</ul>
+						</li>
+					</ul>
 				</div>
-			</section>
-			<section class="work_section">
-				<header class="section_header">
-					<h2 class="skill_title php_title work_title">Marussia Beberages</h2>
-				</header>
-				<div class="work_wrapper">
-					<img src="images/marussia_1.jpg" class="work_img">
-					<div class="work_details_wrapper">
-						<p class="work_details_text paragraph">
-							Developed as a part of my work in <a href="http://www.basecreative.co.uk/" title="Check the site of this company" target="_blank" class="work_inline_link">BaseCreative</a>
-						</p>
-						<div class="work_links_wrapper">
-							<a href="marussia.html" class="work_link" title="Read more about this project"><i class="fa fa-arrow-right work_links_icon"></i>Find out more</a>
-							<a href="http://www.marussiabeverages.co.uk/" class="work_link" title="Visit this site" target="_blank"><i class="fa fa-arrow-right work_links_icon"></i>Visit this site</a>
-						</div>
-					</div>
+				<div class="work_container">
+					<h2 class="work_h2 freelance_1">As a Freelance</h2>
+					<ul class="work_ul_title freelance_2">
+						<li>
+							<a href="javascript:void(0)" title="See more about this work example" class="work_li_title_link" onclick="info_display(2)">Aula de Fotografía Subterránea</a>
+							<ul class="work_ul_options freelance_3" id="ul_2">
+								<li><a href="./work/freelance/auladefotografiasubterranea.html" title="Find out more about this work example" class="work_li_options_link">Find out more</a></li>
+								<li><a href="http://auladefotografiasubterranea.com/" title="Visit this site" class="work_li_options_link" target="_blank">Visit this site</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:void(0)" title="See more about this work example" class="work_li_title_link" onclick="info_display(3)">PSP-Informática</a>
+							<ul class="work_ul_options freelance_3" id="ul_3">
+								<li><a href="./work/freelance/auladefotografiasubterranea.html" title="Find out more about this work example" class="work_li_options_link">Find out more</a></li>
+								<li><a href="http://auladefotografiasubterranea.com/" title="Visit this site" class="work_li_options_link" target="_blank">Visit this site</a></li>
+							</ul>
+						</li>
+					</ul>
 				</div>
-			</section>
-			<section class="work_section">
-				<header class="section_header">
-					<h2 class="skill_title php_title work_title">PSP-Informática</h2>
-				</header>
-				<div class="work_wrapper"> 
-					<img src="images/psp_1.jpg" class="work_img">
-					<div class="work_details_wrapper">
-						<p class="paragraph">
-							Developed as a part of my work in <a href="http://69.89.31.205/~pcocasio/psp_informatica/index.php" title="Check the title of this company" target="_blank" class="work_inline_link">PSP-Informática</a>
-						</p>
-						<div class="work_links_wrapper">
-							<a href="psp.html" class="work_link" title="Read more about this project"><i class="fa fa-arrow-right work_links_icon"></i>Find out more</a>
-							<a href="http://69.89.31.205/~pcocasio/psp_informatica/index.php" class="work_link" title="Visit this site" target="_blank"><i class="fa fa-arrow-right work_links_icon"></i>Visit this site</a>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="work_section">
-				<header class="section_header">
-					<h2 class="skill_title php_title work_title">Aula de Fotografía Subterranea</h2>
-				</header>
-				<div class="work_wrapper">
-					<img src="images/aula_1.jpg" class="work_img">
-					<div class="work_details_wrapper">
-						<p class="paragraph">
-							Developed as a part of my freelance work
-						</p>
-						<div class="work_links_wrapper">
-							<a href="psp.html" class="work_link" title="Read more about this project"><i class="fa fa-arrow-right work_links_icon"></i>Find out more</a>
-							<a href="http://www.auladefotografíasubterranea.com" class="work_link" title="Visit this site" target="_blank"><i class="fa fa-arrow-right work_links_icon"></i>Visit this site</a>
-						</div>
-					</div>
-				</div>
-			</section>
+			</div>
 		</div>
 		<footer>
 			<p class="left"> &copy; 2016 David Guerreiro</p>
-			<p class="left">This site is hosted in <a href="https://github.com/davidguerreiro" title="See this repository in Github" class="footer_link"><i class="fa fa-github footer_icon"></i>Github</a>
+			<p class="left">This site is hosted in <a href="https://github.com/davidguerreiro" title="See this repository in Github" class="footer_link"><i class="fa fa-github footer_icon"></i>Github</a></p>
 		</footer>
 	</body>
 </html>
