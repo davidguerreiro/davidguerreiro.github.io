@@ -261,6 +261,10 @@ progress::-moz-progress-bar{
 
 }
 
+.work_container{
+	background-color: #E6E6E6;
+}
+
 .work_h2{
 	padding: 1em;
 	text-align: center;
@@ -270,6 +274,15 @@ progress::-moz-progress-bar{
 .work_ul_title, .work_ul_options{
 	list-style-type: none;
 }
+
+.work_ul_options{
+	display: none;
+}
+
+.work_ul_options li:first-child{
+	border-top: 1px solid white;
+}
+
 
 .freelance_1{
 	background-color: #819FF7;
@@ -365,10 +378,6 @@ footer p{
 	color: #D358F7;
 }
 
-.work_container{
-	background-color: #F7BE81;
-}
-
 .work_ul_title li{
 	border-top: 1px solid white;
 }
@@ -387,15 +396,7 @@ footer p{
 }
 
 .work_li_title_link:hover{
-	background-color: #F6D8CE;
-}
-
-.work_ul_options{
-	display: none;
-}
-
-.work_ul_options li:first-child{
-	border-top: 1px solid white;
+	background-color: #D8D8D8;
 }
 
 .work_li_options_link{
@@ -405,10 +406,6 @@ footer p{
 	color: #2E2EFE;
 	-moz-transition: padding 0.5s ease;
 	-webkit-transition: padding 0.5s ease;
-}
-
-.work_ul_options li:first-child{
-	border-top: 1px solid white;
 }
 
 .work_li_options_link:hover{
