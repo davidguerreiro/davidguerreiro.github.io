@@ -261,9 +261,10 @@ progress::-moz-progress-bar{
 
 }
 
-.work_container{
+.work_container, .work_section{
 	background-color: #E6E6E6;
 }
+
 
 .work_h2{
 	padding: 1em;
@@ -307,6 +308,8 @@ progress::-moz-progress-bar{
 .employee_3{
 	background-color: #D8CEF6;
 }
+
+
 
 /*footer*/
 
@@ -442,6 +445,10 @@ footer p{
 
 @media all and (min-width: 600px){
 
+	.paragraph{
+		margin-left: 1em;
+	}
+
 	.work_wrapper{
 		clear: both;
 		overflow: hidden;
@@ -452,6 +459,15 @@ footer p{
 		float: left;
 		min-height: 500px;
 	}
+
+	.work_section{
+		border-top: 1px solid white;
+		background-color: #AF97C3;
+	}
+
+	.work_section_text{
+		padding-top: 1em !important;
+	}
 }
 
 
@@ -459,10 +475,6 @@ footer p{
 
 	h1{
 		font-size: 3.2em;
-	}
-
-	.paragraph{
-		margin-left: 1em;
 	}
 
 	.skill_title_icon{
