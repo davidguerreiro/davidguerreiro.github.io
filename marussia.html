@@ -39,20 +39,29 @@
 			<nav class="menu_main_nav">
 				<ul class="menu_main">
 					<li><a href="index.html" class="menu_link"><i class="fa fa-user"></i>About me</a></li>
-					<li><a href="work.html" class="menu_link"><i class="fa fa-file-code-o"></i>Work</a></li>
+					<li><a href="work.html" class="menu_link"><i class="fa fa-file-code-o" rel="unfollow"></i>Work</a></li>
 				</ul>
 			</nav>
 		</header>
 		<div class="main employee">
 			<h2 class="work_template_h2 employee_1">Marussia Beberages</h2>
-			<img src="http://lorempixel.com/960/350" class="work_template_img">
+			<img src="./images/marussia.jpg" class="work_template_img" alt="marussia_screenshot" title="Marussia screenshot">
 			<div class="work_template_wrapper">
 				<div class="work_template_main_container">
 					<p class="work_template_text">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis vulputate nisl. Morbi dictum nisi vel ipsum finibus rhoncus. Proin ut egestas ligula. Etiam sed auctor ante, vitae mollis eros. Quisque nec turpis tristique, fermentum sem nec, ultricies purus. Nulla facilisi. Curabitur viverra diam id viverra sodales. Maecenas bibendum, leo sed imperdiet placerat, ex ipsum tincidunt mi, in molestie erat ligula in arcu. Quisque condimentum luctus sem. Duis malesuada ipsum vel cursus feugiat.
+						The first proyect that I was involved in as a part of my internship in Basecreative (a Digital Web Agency located in Angel, London) was a responsive website about a drinks retailer called Marussia Beverages. They needed a website just to show what they do and how. However, the owner should be able to modify some parts of the content, like update the list of drinks, change the team members or add new retailers, and that's the part of the development I was in charge of.
 					</p>
 					<p class="work_template_text">
-						Sed sed nulla non leo vehicula imperdiet. Donec consectetur ex in porta ornare. Curabitur tristique pellentesque nisl, vel egestas turpis mattis vitae. Pellentesque vestibulum risus non lectus hendrerit tempus. Nam dapibus pharetra feugiat. Maecenas egestas rutrum orci et rhoncus. Proin maximus aliquet auctor. Donec in rutrum lectus. Nunc ac bibendum lectus. Donec eu elementum lacus. In at arcu tortor. Cras vel viverra augue, a congue nibh. Nam lectus leo, maximus a turpis non, volutpat vestibulum metus. Sed nec dignissim nisl, quis lacinia ligula.
+						I had to develop a new area on the admin side of the page (using the company WMS) in order to allow the admin to add new retailers using a spreadsheet. Then, all the retailers should be displayed in a map on the homepage. The retailer's data, like the name or the website, is displayed in a custom pop-add window on the map when the user clicks on the retailer's mark. Cluster markers were used for areas with too many markers.
+					</p>
+					<p class="work_template_text">
+						So, in order to achieve this, first I developed an extensive admin area which allows not only to upload new retailers with a csv file but to delete them and edit them individually. PHP was the language supported by the WMS so I used it to make this job.
+					</p>
+					<p class="work_template_text">
+						I decided to use the Google Maps API to display the homepage map. I had to customize it because some of the default options like the zoom or the colour of the water needed to be changed. A custom mark was also used to display all the retailers. With PHP and MySql, I got all the retailers data and I used JS to put that data into the google maps object , so I could display all the retailers on the map.
+					</p>
+					<p class="work_template_text">
+						I also developed part of the producers section in this website. Working in this project allows me to learn a lot about how to work with a WMS and a content system management. Also I had the opportunity to work close with the Google Maps API, which was a really good experience in terms of programing because all the google APIs have a very extensive documentation to work with.
 					</p>
 				</div>
 				<div class="work_template_sidebar">
@@ -63,9 +72,10 @@
 						<li><a href="http://www.marussiabeverages.co.uk/" target="_blank" title="Visit this site" class="work_template_data_link"><i class="fa fa-globe template_data_icon"></i>Visit this site</a></li>
 					</ul>
 					<ul class="work_template_ul">
-						<li><i class="fa fa-arrow-right template_data_icon list_icon"></i><p class="li_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>
-						<li><i class="fa fa-arrow-right template_data_icon list_icon"></i><p class="li_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>
-						<li><i class="fa fa-arrow-right template_data_icon list_icon"></i><p class="li_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>
+						<li><i class="fa fa-arrow-right template_data_icon list_icon"></i><p class="li_text">I developed an admin area on the company WMS to allow admins to upload data with an spreadsheet.</p></li>
+						<li><i class="fa fa-arrow-right template_data_icon list_icon"></i><p class="li_text">All that data was displayed in a map, so I used the Google Maps API to make this. Work so close with the Google Maps API was a nice experience.</p></li>
+						<li><i class="fa fa-arrow-right template_data_icon list_icon"></i><p class="li_text">Working in this project I learned how to work with a WMS and also I learn a lot about Google Maps API</p></li>
+						<li><i class="fa fa-arrow-right template_data_icon list_icon"></i><p class="li_text">PHP, MySQL and JS were the technologies I worked the most in this project</p></li>
 					</ul>
 				</div>
 			</div>

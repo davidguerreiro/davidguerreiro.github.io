@@ -409,7 +409,7 @@ footer p{
 	color: white;
 }
 
-.fa-twitter, .fa-github{
+.fa-twitter, .fa-github, .cv_link{
 	-moz-transition: color 0.5s ease;
 	-webkit-transition: color 0.5s ease;
 }
@@ -420,6 +420,10 @@ footer p{
 
 .fa-github:hover{
 	color: #A32FBA;
+}
+
+.cv_link:hover{
+	color: #FF8000;
 }
 
 .title_content{
