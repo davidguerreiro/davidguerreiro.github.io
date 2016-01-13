@@ -283,7 +283,7 @@ progress::-moz-progress-bar{
 
 .tech_points li{
 	list-style-type: circle;
-	padding: 0.25em 0 0.25em 0.3em;
+	padding: 0.25em 0.3em 0.25em 0;
 
 }
 
