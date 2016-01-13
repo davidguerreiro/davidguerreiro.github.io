@@ -1,9 +1,14 @@
 
 /*General*/
 
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body{
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1em;
+	background-color: #A9BCF5;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -61,10 +66,6 @@ section:nth-child(2n){
 	background-color: white;
 	margin-right: auto;
 	margin-left: auto;
-}
-
-body{
-	background-color: #A9BCF5;
 }
 
 /*Header*/
@@ -277,12 +278,12 @@ progress::-moz-progress-bar{
 }
 
 .tech_points{
-	padding: 1em 0 1em 1.5em;
+	padding: 1.5em 0 1.5em 1.5em;
 }
 
 .tech_points li{
 	list-style-type: circle;
-	padding: 0.7em 0 0.7em 0.3em;
+	padding: 0.25em 0 0.25em 0.3em;
 
 }
 
