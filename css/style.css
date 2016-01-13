@@ -36,6 +36,14 @@ section:nth-child(2n){
 	color: #2E64FE;
 }
 
+.freelance img{
+	border-bottom: 1px solid #819ff7;
+}
+
+.employee img{
+	border-bottom: 1px solid #9f81f7;
+}
+
 .employee i{
 	color: #8000FF;
 }
@@ -289,6 +297,10 @@ progress::-moz-progress-bar{
 	color: white;
 }
 
+.work_icon{
+	padding-right: 0.5em;
+}
+
 .work_ul_title, .work_ul_options{
 	list-style-type: none;
 }
@@ -324,6 +336,27 @@ progress::-moz-progress-bar{
 
 .employee_3{
 	background-color: #D8CEF6;
+}
+
+.animation_icon{
+	float: right;
+	margin: 0.2em 1em 0 0;
+	color: white !important;
+}
+
+/*animations*/
+
+.rotate{
+	-moz-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+.rotate.down{
+	-ms-transform:rotate(360deg);
+    -moz-transform:rotate(360deg);
+    -webkit-transform:rotate(360deg);
+    transform:rotate(360deg);
 }
 
 /*work template*/
