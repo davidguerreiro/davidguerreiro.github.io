@@ -1,0 +1,72 @@
+.navigation-bar {
+    display: flex;
+    justify-content: space-between;
+
+    li {
+        display: inline-block;
+        padding: 1em;
+    }
+
+    a {
+        display: block;
+        text-decoration: none;
+    }
+
+    &__main-navigation {
+        display: block;
+
+        a {
+            border-bottom: 1px solid transparent;
+            transition: border-bottom 0.6s ease;
+            padding: 0.5em 0;
+            font-size: 1.1em;
+
+            &:hover {
+                cursor: pointer;
+                border-bottom: 1px solid $black;
+            }
+        }
+
+        @media all and ( max-width: 470px ) {
+            display: none;
+        }
+    }
+
+    &__social {
+
+        li {
+            padding: 1em 0.5em;
+
+            @media all and ( max-width: 470px ) {
+                padding: 1em 1.5em;
+            } 
+        }
+
+        a {
+            display: block;
+            border: 2px solid transparent;
+            border-radius: 50%;
+            transition: border 0.5s ease;
+            padding: 0.5em;
+
+            img {
+                width: 1.8em;
+                height: auto;
+                vertical-align: middle;
+            }
+
+            &:hover {
+                border: 2px solid $black;
+            }
+        }
+
+        .navigation-linkedin-icon {
+            width: 1.4em;
+        }
+
+        @media all and ( max-width: 470px ) {
+            margin: 0 auto;
+        }
+
+    }
+}

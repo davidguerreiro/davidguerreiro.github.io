@@ -1,0 +1,78 @@
+.connect {
+    margin: 0 auto;
+    
+    &__title {
+        text-align: center;
+        font-size: 2.3em;
+        font-weight: 100;
+        opacity: 0.8;
+        padding: 1em 0;
+    }
+
+    &__social {
+        display: flex;
+        list-style-type: none;
+
+        @media all and ( max-width: 540px ) {
+            flex-flow: column;
+        }
+
+        li {
+            flex-grow: 1;
+        }
+
+        img {
+            display: block;
+            width: 2em;
+            height: auto;
+            margin: 0 auto;
+        }
+    }
+
+    &__social-link {
+        display: block;
+        font-size: 2em;
+        padding: 2em 0;
+        @include do-transition( background-color );
+
+        &--mail {
+            &:hover {
+                background-color: $mail;
+            }
+
+            @media all and ( max-width: 540px ) {
+                background-color: $mail;
+            }
+        }
+
+        &--git {
+            &:hover {
+                background-color: $git;
+            }
+
+            @media all and ( max-width: 540px ) {
+                background-color: $git;
+            }
+        }
+
+        &--twitter {
+            &:hover {
+                background-color: $twitter;
+            }
+
+            @media all and ( max-width: 540px ) {
+                background-color: $twitter;
+            }
+        }
+
+        &--linkedin {
+            &:hover {
+                background-color: $linkedin;
+            }
+
+            @media all and ( max-width: 540px ) {
+                background-color: $linkedin;
+            }
+        }
+    }
+}

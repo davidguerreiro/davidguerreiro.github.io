@@ -1,0 +1,23 @@
+@charset 'UTF-8';
+
+// abstracts
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+// normalize and general styles
+@import "general/general";
+@import "vendors/normalize";
+
+// layout
+@import "layout/wp-section";
+
+// components
+@import "components/top-navigation-bar";
+@import "components/hero";
+@import "components/skill-title";
+@import "components/skill-section";
+@import "components/work-list";
+@import "components/js-section";
+@import "components/other-skills";
+@import "components/footer";
+@import "components/connect";

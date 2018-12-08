@@ -1,0 +1,70 @@
+.hero {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1700px;
+
+    @media all and ( max-width: 925px ) {
+        flex-flow: column-reverse;
+    }
+
+    &__title {
+        font-family: 'Black Han Sans', sans-serif;
+        font-size: 5.5em;
+        line-height: 1;
+        margin-top: 0.7em;
+        width: 50%;
+
+        @media all and ( max-width: 600px ) {
+            font-size: 3.5em;
+            margin: 0.7em auto 0 auto;
+            width: 100%;
+        }
+
+        @media all and ( max-width: 470px ) {
+            font-size: 2.3em;
+            text-align: center;
+            margin-top: 1.1em;
+        }
+    }
+
+    &__subtitle {
+        width: 95%;
+        margin: 0.2em 0 0 0.2em;
+        padding-bottom: 0.1em;
+        border-bottom: 2px solid #e2e2e2;
+
+        @media all and ( max-width: 470px ) {
+            font-size: 1.2em;
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    &__description {
+        width: 80%;
+        margin-top: 2em;
+        font-size: 1.1em;
+        line-height: 1.6;
+        margin-left: 0.3em;
+        max-width: 33.5em;
+
+        @media all and ( max-width: 470px ) {
+            width: 100%;
+        }
+    }
+
+    &__image {
+        display: block;
+        width: 25em;
+        height: auto;
+        margin-top: 4.5em;
+        border-radius: 50%;
+        filter: grayscale(0.5);
+        -webkit-filter: grayscale(0.5);
+
+        @media all and ( max-width: 925px ) {
+            width: 15em;
+            margin: 1em auto 0 auto;
+        }
+    }
+}

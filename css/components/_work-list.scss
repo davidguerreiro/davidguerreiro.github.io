@@ -1,0 +1,181 @@
+.work-list {
+    width: 90%;
+    margin: 0 auto;
+
+    &__title {
+        text-align: center;
+        font-size: 2.3em;
+        font-weight: 100;
+        opacity: 0.8;
+        padding: 1em 0;
+    }
+
+    &__items-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+
+        &:first-child {
+            @include set_dot_border( border-right, $grey );
+            @include set_dot_border( border-bottom, $grey );
+        }
+
+        article:first-of-type {
+            @include set_dot_border( border-right, $grey );
+            @include set_dot_border( border-bottom, $grey );
+        }
+
+        article:nth-of-type(2) {
+            @include set_dot_border( border-bottom, $grey );
+        }
+
+        article:nth-of-type(3) {
+            @include set_dot_border( border-right, $grey );
+        }
+
+        &--js {
+            &:first-child {
+                @include set_dot_border( border-right, $js-section-color );
+                @include set_dot_border( border-bottom, $js-section-color );
+            }
+    
+            article:first-of-type {
+                @include set_dot_border( border-right, $js-section-color );
+                @include set_dot_border( border-bottom, $js-section-color );
+            }
+    
+            article:nth-of-type(2) {
+                @include set_dot_border( border-bottom, $js-section-color );
+            }
+    
+            article:nth-of-type(3) {
+                @include set_dot_border( border-right, $js-section-color );
+            }
+
+        }
+
+        @media all and ( max-width: 800px ) {
+            flex-wrap: nowrap;
+            flex-direction: column;
+            border-bottom: 1px dotted $grey;
+
+            &:first-child {
+                border-right: none;
+                border-top: 1px dotted $grey;
+                border-bottom: 1px dotted $grey;
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            
+    
+            article:first-of-type {
+                border-right: none;
+                border-top: 1px dotted $grey;
+                border-bottom: 1px dotted $grey;
+            }
+    
+            article:nth-of-type(2) {
+                border-bottom: 1px dotted $grey;
+            }
+    
+            article:nth-of-type(3) {
+                border-right: none;
+                border-bottom: 1px dotted $grey;
+            }
+
+        }
+
+    }
+
+    
+
+    .work-list-item {
+        width: 49%;
+        
+        @media all and ( max-width: 800px ) {
+            width: 100%;
+        }
+        
+
+        &__title {
+            font-size: 2em;
+            margin: 0.5em 0 0.1em 0.7em;
+
+            &--js {
+                color: $js-section-color;
+            }
+
+            @media all and ( max-width: 800px ) {
+                margin-top: 1em;
+            }
+        }
+
+        &__properties {
+            list-style-type: none;
+            margin-left: 1.5em;
+
+             li {
+                display: inline-block;
+                padding-left : 0.2em;
+                color: $grey;
+             }
+        }
+
+        &__description {
+            margin: 1.5em 0 1em 1em;
+            font-size: 0.95em;
+            width: 80%;
+            padding: 0 0 1em 0.5em;
+        }
+
+        &__links {
+            list-style-type: none;
+            display: flex;
+            justify-content: flex-end;
+            padding: 0 1.5em 2em 0;
+
+            li {
+                margin-right: 10px;
+            }
+        }
+
+        &__link {
+            display: block;
+            text-decoration: none;
+            @include do-transition( background-color );
+            padding: 0.5em;
+
+            img {
+                display: block;
+                width: 2em;
+                height: auto;
+                margin: 0 auto;
+            }
+
+
+            &--website {
+                &:hover {
+                    background-color: #fbf17c;
+                }
+            }
+
+            &--code {
+                &:hover {
+                    background-color: #f5c0f5;
+                }
+            }
+        }
+
+        &__caption {
+            font-size: 0.8em;
+            color: $grey;
+        }
+
+        &--secondary {
+            padding-left: 0.8em;
+        }
+
+    }
+}

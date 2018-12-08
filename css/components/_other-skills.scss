@@ -1,0 +1,55 @@
+.other-skills {
+    background-color: $wp-section-color;
+
+    &__title {
+        text-align: center;
+        font-size: 2.3em;
+        font-weight: 100;
+        opacity: 0.8;
+        padding: 1em 0;
+        margin: 1em auto 0 auto;
+    }
+
+    &__skill-ilustration {
+        display: block;
+        width: 10em;
+        height: auto;
+        margin: 8.5em auto 0 auto;
+    }
+
+    &__wrapper {
+        display: flex;
+        margin: 0 auto;
+
+        @media all and ( max-width: 660px ) {
+            flex-flow: column;
+        }
+    }
+
+    &__content {
+        width: 50%;
+
+        @media all and ( max-width: 660px ) {
+            width: 100%;
+        }
+
+        &--alternative {
+            background-color: $white;
+
+            @media all and ( max-width: 660px ) {
+                display: none;
+            }
+        }
+    }
+
+    &__skills-list {
+        width: 80%;
+        margin: 0 auto;
+        padding: 2em 0;
+        list-style-type: circle;
+
+        li {
+            margin-bottom: 1em;
+        }
+    }
+}

@@ -1,0 +1,97 @@
+.main-footer {
+    background-color: $black;
+    color: $white;
+    display: flex;
+    padding: 1.5em 0;
+    justify-content: space-between;
+
+    @media all and ( max-width: 550px ) {
+        flex-direction: column;
+    }
+
+    &__author-resume {
+        padding-left: 3.5em;
+
+        @media all and ( max-width: 550px ) {
+            padding-left: 0;
+            margin: 0 auto;
+        }
+
+        p, .author-caption {
+            width: 100%;
+            max-width: 300px;
+
+            @media all and ( max-width: 550px ) {
+                max-width: 150px;
+            }
+        }
+
+        p {
+            font-size: 1.1em;
+            border-bottom: 1px solid;
+            padding-bottom: 4px;
+            
+            span {
+                float: right;
+                padding-left: 2.5em;
+
+                @media all and ( max-width: 550px ) {
+                    display: none;
+                }
+            }
+        }
+
+        .author-caption {
+            display: block;
+            color: $footer-grey;
+            padding-top: 5px;
+            font-size: 0.9em;
+
+            @media all and ( max-width: 550px ) {
+                font-size: 0.7em;
+            }
+        }
+    }
+
+    &__center-section {
+        padding-right: 3.5em;
+
+        @media all and ( max-width: 550px ) {
+            padding-right: 0;
+            margin-top: 1.5em;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.1em;
+            padding-top: 0.2em;
+
+
+            a {
+                text-decoration: none;
+                color: #ff99ff;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .footer-center-caption {
+            display: block;
+            text-align: center;
+            padding-top: 8px;
+            font-size: 0.7em;
+            color: $footer-grey;
+
+            a {
+                text-decoration: none;
+                color: #8383ff;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
