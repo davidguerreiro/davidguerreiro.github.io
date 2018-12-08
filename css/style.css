@@ -641,7 +641,7 @@ h1, h2, h3, h4, h5, h6 {
       padding-left: 0.8em; }
       @media all and (max-width: 800px) {
         .work-list .work-list-item--secondary {
-          padding-left: none; } }
+          padding-left: 0; } }
 
 .js-section {
   margin: 0 auto; }
