@@ -1,3 +1,13 @@
 .wp-section {
     background-color: $wp-section-color;
 }
+
+.unity-section {
+    background-color: $white;
+    color: $black;
+    margin-bottom: -80px;
+
+    &__list ul {
+        background-color: $black !important;
+    }
+}
